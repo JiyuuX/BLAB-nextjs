@@ -55,6 +55,11 @@ const authApiSlice = apiSlice.injectEndpoints({
 				url: '/users/',
 				method: 'POST',
 				body: { first_name, last_name, email, password, re_password },
+				headers: {
+					Accept: 'application/json',
+					'Content-Type': 'application/x-www-form-urlencoded',
+					'Access-Control-Allow-Origin' : 'https://www.https://blab-api.vercel.app/'
+				},
 			}),
 		}),
 		verify: builder.mutation({
